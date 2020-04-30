@@ -196,8 +196,8 @@ class FechaHora:
             m = self.getMinuto()
             s = self.getSegundo()
 
-            return self.verificarSumaInt(d,mes,a,h, m, s)
-        else:
+            resultado = self.verificarSumaInt(d,mes,a,h, m, s)
+        elif (isinstance(unHoI, Hora)):
             d = self.getDia()
             mes = self.getMes()
             a = self.getAnio()
@@ -205,7 +205,11 @@ class FechaHora:
             m = self.getMinuto() + unHoI.gMin()
             s = self.getSegundo() + unHoI.gSeg()
 
-            return self.verificarSuma(d,mes,a,h, m, s)
+            resultado = self.verificarSuma(d,mes,a,h, m, s)
+        else:
+            print('Valor no válido para el operando.')
+
+        return resultado
 
     def __radd__ (self, unHoI):
         if (str(unHoI).isdigit()):
@@ -216,8 +220,8 @@ class FechaHora:
             m = self.getMinuto()
             s = self.getSegundo()
 
-            return self.verificarSumaInt(d,mes,a,h, m, s)
-        else:
+            resultado = self.verificarSumaInt(d,mes,a,h, m, s)
+        elif (isinstance(unHoI, Hora))::
             d = self.getDia()
             mes = self.getMes()
             a = self.getAnio()
@@ -225,7 +229,11 @@ class FechaHora:
             m = self.getMinuto() + unHoI.gMin()
             s = self.getSegundo() + unHoI.gSeg()
 
-            return self.verificarSuma(d,mes,a,h, m, s)
+            resultado = self.verificarSuma(d,mes,a,h, m, s)
+        else:
+            print('Valor no válido para el operando.')
+            
+        return resultado
 
     def verificarResta(self, d, mes, a, h, m, s):
         #Verificar Mes
@@ -257,7 +265,7 @@ class FechaHora:
                     else:
                         mes = 2
                         d = 28
-        elif (mes == 2) & (d == 0):                                #Cuando se resta 1 y se está en el primer dia de febrero 
+        elif (mes == 2) & (d == 0):                                #Cuando se resta 1 y se está en el primer dia de febrero
             mes = 1
             d = 31
         else:
