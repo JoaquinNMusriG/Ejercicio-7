@@ -221,7 +221,7 @@ class FechaHora:
             s = self.getSegundo()
 
             resultado = self.verificarSumaInt(d,mes,a,h, m, s)
-        elif (isinstance(unHoI, Hora))::
+        elif (isinstance(unHoI, Hora)):
             d = self.getDia()
             mes = self.getMes()
             a = self.getAnio()
@@ -232,7 +232,7 @@ class FechaHora:
             resultado = self.verificarSuma(d,mes,a,h, m, s)
         else:
             print('Valor no válido para el operando.')
-            
+
         return resultado
 
     def verificarResta(self, d, mes, a, h, m, s):
